@@ -1,0 +1,9 @@
+To make a blackjack app i need different things. 
+The players that are playing the card game
+The cards themselves(A, K, Q etc.)
+the card dealer that is sharing the cards out to the players that are sitting around the table
+A score tracker that is tracking the score, who is leading and who is loosing, things like that. 
+A result board that is showing the result. 
+
+Making my own loop.
+there are 52 cards in a card stack.
