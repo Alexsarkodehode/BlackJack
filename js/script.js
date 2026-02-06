@@ -4,23 +4,37 @@ const suits = ["♥", "♦", "♣", "♠"]
 const rank = ["A", "2", "3", "4", "5", "6", "7", "8", "9","10", "J", "Q", "K"] 
 
 
-for(const element1 of suits){
-for(const element2 of rank){
-    console.log(`${element1}${element2}`)
-    deck.push(element1+element2)
-}
-}
-
-console.log(deck)
-
-let fromRankToPoints = {
-    "A": 1,
-    "1": 1,
+let convertingToPointsValue = {
+    "A": 11,
     "2": 2,
     "3": 3,
+    "4": 4,
+    "5": 5,
+    "6": 6, 
+    "7": 7,
+    "8": 8,
+    "9": 9,
+    "10": 10,
+    "J": 10,
+    "Q": 10,
+    "K": 10
     
-
 }
+console.log(convertingToPointsValue)
+
+for(const element1 of suits){
+    for(const element2 of rank){
+        console.log(`${element1}${element2}`)
+        deck.push(element1+element2)
+        
+    }
+}
+console.log(deck)
+
+const rankArray = JSON.parse(deck)
+console.log(rankArray)
+const specialRanks = rankArray[0,10,11,12]
+console.log(specialRanks)
 
 //maps
 /* 

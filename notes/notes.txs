@@ -7,3 +7,7 @@ A result board that is showing the result.
 
 Making my own loop.
 there are 52 cards in a card stack.
+
+How do i extract the value from a string? 
+You can first create an object. 
+Transelate the value of the id over to the value that you want inside the object, and then extract it. 
