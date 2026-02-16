@@ -4,7 +4,15 @@ const suits = ["♥", "♦", "♣", "♠"]
 const rank = ["A", "2", "3", "4", "5", "6", "7", "8", "9","10", "J", "Q", "K"] 
 
 
-let convertingToPointsValue = {
+for(const element1 of suits){
+    for(const element2 of rank){
+        console.log(`${element1}${element2}`)
+        deck.push(element1+element2)
+        
+    }
+}
+
+let cardValues = {
     "A": 11,
     "2": 2,
     "3": 3,
@@ -20,60 +28,55 @@ let convertingToPointsValue = {
     "K": 10
     
 }
-console.log(convertingToPointsValue)
+console.log(cardValues)
 
-for(const element1 of suits){
-    for(const element2 of rank){
-        console.log(`${element1}${element2}`)
-        deck.push(element1+element2)
-        
-    }
-}
-console.log(deck)
 
-const rankArray = JSON.parse(deck)
-console.log(rankArray)
-const specialRanks = rankArray[0,10,11,12]
-console.log(specialRanks)
 
-//maps
-/* 
-for(let i = 0; i<rank.length; i++){
+
+let threeCard = "♥3"
+
+let extractThreeCard = threeCard.slice(1)
+console.log(extractThreeCard)
+
+let resultThreeCard = cardValues[extractThreeCard]
+console.log(resultThreeCard)
+
+let myCard = "♥K"
+
+
+function getCardValue(card){
     
-    for(let j = 0; j<suits[i].length; j++){
-        console.log(suits[i])
-    }
-} */
+        // nå ser vi den i console
 
-/* 
- 
-for(let i = 0; i < rank.length; i++){
-    console.log(rank[i] + suits[i])
-    
-} */
+    let extractKing = card.slice(1)
+    let rankValues = cardValues[extractKing]
+    return rankValues
 
-/* const names = ["Alice", "Bob", "Charlie"];
-const ages = [25, 30, 35];415
 
-for (let i = 0; i < names.length; i++) {
-    // Accessing corresponding elements using the same index
-    console.log(names[i] + " is " + ages[i] + " years old.");
-} */
-
-/* function testLoop(suits, rank) {
-  let result = "";
-  for (const i in suits) {
-    result += `${rank}.${i} = ${suits[i]}<br>`;
-  }
-  result += "<hr>";
-  return result;
 }
-console.log(testLoop) */
+getCardValue("♥K")
 
+let resultat = getCardValue("♦7")  // returverdien lagres i resultat
+console.log(resultat)    // nå ser vi den i console
 
+function dealCard(){
+let deckRandom = Math.floor(Math.random()*52)
+let randomDeckCard = deck[deckRandom]
+console.log(randomDeckCard)
+return randomDeckCard
 
-/* 
-let mathRandom = Math.floor(Math.random()*10)
-console.log(mathRandom)  */
+}
+dealCard()
 
+let playerHand = []
+
+function playerHandFunc(){
+
+playerHand.push(dealCard())
+
+return playerHand;
+
+}
+playerHandFunc()
+console.log(playerHandFunc())
 
