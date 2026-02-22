@@ -133,8 +133,10 @@ let cardValues = {
 function getCardValue(card){
 
 let extractPoints = card.slice(1)
-let checkExtractCard = extractPoints[cardValues]
+let checkExtractCard = cardValues[extractPoints]
 return checkExtractCard; 
 };
 getCardValue("♥K")
 
+let functionOne = getCardValue("♥K")
+console.log(functionOne)
